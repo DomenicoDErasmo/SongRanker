@@ -4,7 +4,7 @@ import tkinter as tk
 import PIL.ImageTk
 from PIL import Image, ImageTk
 from CustomModules import SongComparison
-import GuiMenu
+from Testing import GuiMenu
 
 
 class SongComparisonGUI(GuiMenu.GuiMenu):
@@ -16,16 +16,16 @@ class SongComparisonGUI(GuiMenu.GuiMenu):
 
     def BuildImage(self, song: list) -> PIL.ImageTk.PhotoImage:
         image_name = os.path.splitext(song[1])[0]
-        path = Path(os.getcwd()).parent / "ResourceFiles\\Album Covers" / (image_name + ".jpg")
+        path = Path(os.getcwd()) / "ResourceFiles\\Album Covers" / (image_name + ".jpg")
         return ImageTk.PhotoImage(Image.open(path).resize((150, 150)))
 
     def BuildImages(self, both_songs: list):
         left_image_name = os.path.splitext(both_songs[0][1])[0]
-        left_path = Path(os.getcwd()).parent / "ResourceFiles\\Album Covers" / (left_image_name + ".jpg")
+        left_path = Path(os.getcwd()) / "ResourceFiles\\Album Covers" / (left_image_name + ".jpg")
         self.left_image = ImageTk.PhotoImage(Image.open(left_path).resize((150, 150)))
 
         right_image_name = os.path.splitext(both_songs[1][1])[0]
-        right_path = Path(os.getcwd()).parent / "ResourceFiles\\Album Covers" / (right_image_name + ".jpg")
+        right_path = Path(os.getcwd()) / "ResourceFiles\\Album Covers" / (right_image_name + ".jpg")
         self.right_image = ImageTk.PhotoImage(Image.open(right_path).resize((150, 150)))
 
     def SelectLeftSong(self, both_songs, left):

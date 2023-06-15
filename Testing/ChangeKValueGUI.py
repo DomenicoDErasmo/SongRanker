@@ -1,5 +1,5 @@
 import tkinter as tk
-import GuiMenu
+from Testing import GuiMenu
 
 
 class ChangeKValueGUI(GuiMenu.GuiMenu):

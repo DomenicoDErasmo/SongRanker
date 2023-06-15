@@ -88,22 +88,22 @@ class GuiMenu:
         return both_songs
 
     def RankSongs(self):
-        import SongComparisonGUI
+        from Testing import SongComparisonGUI
         song_comparison = SongComparisonGUI.SongComparisonGUI()
         song_comparison.RunMenu()
 
     def ResetSongs(self):
-        import SongResetGUI
+        from Testing import SongResetGUI
         song_reset = SongResetGUI.SongResetGUI()
         song_reset.RunMenu()
 
     def ChangeKValue(self):
-        import ChangeKValueGUI
+        from Testing import ChangeKValueGUI
         change_k = ChangeKValueGUI.ChangeKValueGUI()
         change_k.RunMenu()
 
     def ViewSong(self):
-        import ViewSongGUI
+        from Testing import ViewSongGUI
         view_song = ViewSongGUI.ViewSongGUI()
         view_song.RunMenu()
 
